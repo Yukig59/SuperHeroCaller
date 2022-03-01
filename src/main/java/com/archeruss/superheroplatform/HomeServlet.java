@@ -12,16 +12,11 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
 
-@WebServlet(name = "homeServlet", value = "/")
+@WebServlet(name = "hello-servlet", value = "/")
 public class HomeServlet extends HttpServlet {
-    @Override
-    public void init() throws ServletException {
-        super.init();
-
-    }
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         IncidentRepository incidentRepo = new IncidentRepository();
 
         try {

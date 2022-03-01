@@ -1,0 +1,11 @@
+.ligne {
+    display: flex;
+}
+.colonne {
+    flex: 50%;
+
+}
+body{
+    background-color: red;
+}
+

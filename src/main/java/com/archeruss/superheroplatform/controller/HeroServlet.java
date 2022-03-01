@@ -30,6 +30,7 @@ public class HeroServlet extends HttpServlet {
         }
 
         request.setAttribute("heroList", heroList);
+        request.setCharacterEncoding("UTF-8");
         request.getRequestDispatcher("pages/allHeros.jsp").forward(request, response);
     }
 
@@ -50,6 +51,7 @@ public class HeroServlet extends HttpServlet {
             e.printStackTrace();
         }
 
+        request.setCharacterEncoding("UTF-8");
 
     }
 

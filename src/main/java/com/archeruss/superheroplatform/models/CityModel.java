@@ -2,18 +2,21 @@ package com.archeruss.superheroplatform.models;
 
 
 public class CityModel {
-    private Integer id;
-    private String name;
-    private String longitude;
-    private String latitude;
-    private String incident;
+    public Integer id;
+    public String name;
+    public String longitude;
+    public String latitude;
 
-    public CityModel(Integer id, String name, String longitude, String latitude, String incident) {
+    public CityModel(Integer id, String name, String longitude, String latitude) {
         this.id = id;
         this.name = name;
         this.longitude = longitude;
         this.latitude = latitude;
-        this.incident = incident;
+    }
+    public CityModel(String name, String longitude, String latitude) {
+        this.name = name;
+        this.longitude = longitude;
+        this.latitude = latitude;
     }
 
     public CityModel() {
@@ -43,11 +46,11 @@ public class CityModel {
         this.latitude = latitude;
     }
 
-    public String getIncident() {
-        return incident;
+    public String getName() {
+        return name;
     }
 
-    public void setIncident(String incident) {
-        this.incident = incident;
+    public void setName(String name) {
+        this.name = name;
     }
 }

@@ -14,6 +14,9 @@
           <element id="module-output" name="superHeroPlatform" />
         </element>
         <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.geotools:gt-shapefile:15.2" />
+          <element id="library" level="project" name="Maven: org.geotools:gt-epsg-hsql:15.2" />
+          <element id="library" level="project" name="Maven: javax.servlet:jstl:1.2" />
           <element id="library" level="project" name="Maven: javax.mvc:javax.mvc-api:1.0.0" />
         </element>
       </element>
