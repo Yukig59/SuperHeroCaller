@@ -2,6 +2,7 @@ package com.archeruss.superheroplatform.controller;
 
 import com.archeruss.superheroplatform.repository.CityRepository;
 import com.archeruss.superheroplatform.repository.IncidentRepository;
+import com.archeruss.superheroplatform.services.ServiceGPS;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -46,6 +47,20 @@ public class AddAlert extends HttpServlet {
 
     }
     public void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException{
-        
+
+        String ville = req.getParameter("ville");
+        var gps = new ServiceGPS();
+        try {
+            gps.getFromCityString(ville);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        try {
+            gps.getFromCoordinates(2.32,48.85);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        req.getRequestDispatcher("pages/showHerosAround.jsp").forward(req, res);
+
     }
 }

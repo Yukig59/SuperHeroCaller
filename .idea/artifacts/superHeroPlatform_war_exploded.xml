@@ -15,7 +15,22 @@
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: org.geotools:gt-shapefile:15.2" />
+          <element id="library" level="project" name="Maven: org.geotools:gt-data:15.2" />
+          <element id="library" level="project" name="Maven: org.geotools:gt-main:15.2" />
+          <element id="library" level="project" name="Maven: org.geotools:gt-api:15.2" />
+          <element id="library" level="project" name="Maven: com.vividsolutions:jts:1.13" />
+          <element id="library" level="project" name="Maven: org.jdom:jdom:1.1.3" />
+          <element id="library" level="project" name="Maven: javax.media:jai_core:1.1.3" />
           <element id="library" level="project" name="Maven: org.geotools:gt-epsg-hsql:15.2" />
+          <element id="library" level="project" name="Maven: org.geotools:gt-referencing:15.2" />
+          <element id="library" level="project" name="Maven: com.googlecode.efficient-java-matrix-library:core:0.26" />
+          <element id="library" level="project" name="Maven: commons-pool:commons-pool:1.5.4" />
+          <element id="library" level="project" name="Maven: org.geotools:gt-metadata:15.2" />
+          <element id="library" level="project" name="Maven: org.geotools:gt-opengis:15.2" />
+          <element id="library" level="project" name="Maven: net.java.dev.jsr-275:jsr-275:1.0-beta-2" />
+          <element id="library" level="project" name="Maven: jgridshift:jgridshift:1.0" />
+          <element id="library" level="project" name="Maven: net.sf.geographiclib:GeographicLib-Java:1.44" />
+          <element id="library" level="project" name="Maven: org.hsqldb:hsqldb:2.3.0" />
           <element id="library" level="project" name="Maven: javax.servlet:jstl:1.2" />
           <element id="library" level="project" name="Maven: javax.mvc:javax.mvc-api:1.0.0" />
         </element>
