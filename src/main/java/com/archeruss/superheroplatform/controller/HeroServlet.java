@@ -1,6 +1,8 @@
 package com.archeruss.superheroplatform.controller;
 
+import com.archeruss.superheroplatform.models.Incident;
 import com.archeruss.superheroplatform.models.SuperHeroModel;
+import com.archeruss.superheroplatform.repository.IncidentRepository;
 import com.archeruss.superheroplatform.repository.SuperheroRepository;
 
 import javax.servlet.ServletException;
@@ -25,10 +27,12 @@ public class HeroServlet extends HttpServlet {
         List<SuperHeroModel> heroList = null;
         try {
             heroList = heroReop.getAllHeros();
+            var incidentList = IncidentRepository.getAll();
+            request.setAttribute("incidentList", incidentList);
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
         request.setAttribute("heroList", heroList);
         request.setCharacterEncoding("UTF-8");
         request.getRequestDispatcher("pages/allHeros.jsp").forward(request, response);

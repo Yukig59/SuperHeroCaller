@@ -10,13 +10,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class IncidentRepository {
-    private final MysqlConn database;
+    private static final MysqlConn database =new MysqlConn();;
 
-    public IncidentRepository() {
-        this.database = new MysqlConn();
-    }
 
-    public List<Incident> getAll() throws SQLException {
+
+    public static List<Incident> getAll() throws SQLException {
         try {
             Connection conn = database.getDatabaseConnection();
             String query = "SELECT id, label FROM superhero.incidents";
@@ -32,7 +30,7 @@ public class IncidentRepository {
             throw e;
         }
     }
-    public Incident getById(Integer id) throws SQLException {
+    public static Incident getById(Integer id) throws SQLException {
         System.out.println(id);
         try {
             Connection conn = database.getDatabaseConnection();

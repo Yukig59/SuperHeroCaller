@@ -29,8 +29,31 @@
             </div>
         </c:if>
     </span>
-<c:forEach var="item" items="${heroList}">
-    <p class="text-light">${ item.name }</p>
-</c:forEach>
+<div class="d-flex justify-content-evenly ">
+    <c:forEach var="item" items="${heroList}">
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">${item.name}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">0${item.telephone}</h6>
+            <p class="card-text"><c:forEach var="incident" items="${incidentList}">
+                <c:if test="${incident.id == item.incident1}">
+                    ${incident.label}
+                </c:if>
+            </c:forEach> </p>
+            <p class="card-text"><c:forEach var="incident" items="${incidentList}">
+                <c:if test="${incident.id == item.incident2}">
+                    ${incident.label}
+                </c:if>
+            </c:forEach> </p>
+            <p class="card-text"><c:forEach var="incident" items="${incidentList}">
+                <c:if test="${incident.id == item.incident3}">
+                    ${incident.label}
+                </c:if>
+            </c:forEach> </p>
+
+        </div>
+    </div>
+    </c:forEach>
+</div>
 </body>
 </html>

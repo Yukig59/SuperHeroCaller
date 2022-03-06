@@ -21,6 +21,7 @@
             <img src="https://cdn.discordapp.com/attachments/530696124349284382/950014240322891826/Fichier_2Hero_12.png" width="50%" height="auto" />
         </div>
         <a href="<c:url value="add-hero"/>" ><button class="btn btn-warning">Ajouter un héros</button></a>
+        <a href="<c:url value="hero"/>" ><button class="btn btn-warning">Voir les héros</button></a>
         <a href="<c:url value="add-city" />"><button class="btn btn-success">Ajouter une ville</button></a>
         <a href="<c:url value="add-alert"/>"><button class="btn btn-danger">ALED !</button></a>
 </div>
