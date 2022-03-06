@@ -32,4 +32,22 @@ public class IncidentRepository {
             throw e;
         }
     }
+    public Incident getById(Integer id) throws SQLException {
+        System.out.println(id);
+        try {
+            Connection conn = database.getDatabaseConnection();
+            String query = "SELECT id, label FROM superhero.incidents WHERE id = ?";
+            PreparedStatement stmt = conn.prepareStatement(query);
+            stmt.setInt(1,id);
+            ResultSet rs = stmt.executeQuery();
+            Incident incident = null;
+            while (rs.next()){
+                incident = new Incident(rs.getInt("id"), rs.getString("label"));
+            }
+            return incident;
+
+        } catch (SQLException e) {
+            throw e;
+        }
+    }
 }

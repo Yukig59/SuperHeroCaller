@@ -1,22 +1,23 @@
 package com.archeruss.superheroplatform.models;
 
 
+
 public class CityModel {
     public Integer id;
     public String name;
-    public String longitude;
-    public String latitude;
+    public Float lon;
+    public Float lat;
 
-    public CityModel(Integer id, String name, String longitude, String latitude) {
+    public CityModel(Integer id, String name, Float lon, Float lat) {
         this.id = id;
         this.name = name;
-        this.longitude = longitude;
-        this.latitude = latitude;
+        this.lon = lon;
+        this.lat = lat;
     }
-    public CityModel(String name, String longitude, String latitude) {
+    public CityModel(String name, Float lon, Float lat) {
         this.name = name;
-        this.longitude = longitude;
-        this.latitude = latitude;
+        this.lon = lon;
+        this.lat = lat;
     }
 
     public CityModel() {
@@ -30,20 +31,20 @@ public class CityModel {
         this.id = id;
     }
 
-    public String getLongitude() {
-        return longitude;
+    public Float getLon() {
+        return lon;
     }
 
-    public void setLongitude(String longitude) {
-        this.longitude = longitude;
+    public void setLon(Float lon) {
+        this.lon = lon;
     }
 
-    public String getLatitude() {
-        return latitude;
+    public Float getLat() {
+        return lat;
     }
 
-    public void setLatitude(String latitude) {
-        this.latitude = latitude;
+    public void setLat(Float lat) {
+        this.lat = lat;
     }
 
     public String getName() {

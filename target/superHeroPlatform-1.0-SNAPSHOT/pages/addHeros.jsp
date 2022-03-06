@@ -15,9 +15,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assets/styles.css">
 </head>
-<body class="bg-info">
-<a><button class="btn btn-sm btn-primary"><- Retour</button></a>
-<h1 class="text-center text-light mt-5">Ajouter un nouveau héros</h1>
+<style>
+    body{
+        background-image: url('https://media.discordapp.net/attachments/530696124349284382/950014275353726996/4830017.jpg');
+        background-position: center;
+    }
+</style>
+<body>
+<h1 class="text-center text-primary fs-2 mt-5">Ajouter un nouveau héros</h1>
+<div class="text-center"><a href="<c:url value="/"/>"><button class="btn btn-sm btn-primary text-center">Retour</button></a>
+</div>
 <div style="margin-left: 15%;margin-right: 5%;">
     <form method="post" action="${pageContext.request.contextPath}/hero" class="form-control">
         <label for="heroName">Nom</label>
@@ -26,11 +33,11 @@
         <label for="telephone">N° de téléphone</label>
         <input id="telephone" name="telephone" class="form-control" />
         <br>
-        <label  for="longitude">Longitude</label>
-        <input id="longitude" name="longitude" class="form-control"/>
+        <label  for="lon">Longitude</label>
+        <input id="lon" name="lon" class="form-control"/>
         <br>
-        <label for="latitude">Latitude</label>
-        <input id="latitude" name="latitude" class="form-control"/>
+        <label for="lat">Latitude</label>
+        <input id="lat" name="lat" class="form-control"/>
         <br>
         <label for="incident1">Incident 1</label>
         <select id="incident1" name="incident1" class="form-select">
@@ -52,7 +59,7 @@
                 <option value="${item.id}">${item.label}</option>
             </c:forEach>
         </select>
-        <input type="submit"value="Valider" class="btn btn-sm btn-success" style="float:left"/>
+        <input type="submit"value="Valider" class="btn btn-sm btn-success" />
     </form>
 </div>
 </body>

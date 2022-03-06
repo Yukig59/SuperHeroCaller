@@ -15,6 +15,7 @@
 </head>
 <body class="bg-info text-center">
 <h1 class="text-center text-light">Liste des héros inscrits</h1>
+<a href="<c:url value="/"/>"><button class="btn btn-sm btn-primary text-center">Retour</button></a>
 <c:forEach var="item" items="${heroList}">
     <p class="text-light">${ item.name } (${item.incident1} | ${item.incident2} | ${item.incident3})</p>
 </c:forEach>

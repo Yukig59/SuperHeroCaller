@@ -38,13 +38,16 @@ public class AddCity extends HttpServlet {
    @Produces("text/html")
    public void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
       String name = req.getParameter("name");
-      String longitude = req.getParameter("longitude");
-      String latitude = req.getParameter("latitude");
+      Float longitude = Float.valueOf(req.getParameter("lon"));
+      Float latitude = Float.valueOf(req.getParameter("lat"));
 
       CityModel city = new CityModel(name,longitude,latitude);
       try {
          CityRepository repo = new CityRepository();
          repo.createCity(city);
+         String message = "Ville créée !";
+         req.setAttribute("message",message);
+
       } catch (SQLException e) {
          e.printStackTrace();
       }

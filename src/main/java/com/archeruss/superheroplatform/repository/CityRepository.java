@@ -1,8 +1,6 @@
 package com.archeruss.superheroplatform.repository;
 
 import com.archeruss.superheroplatform.models.CityModel;
-import com.archeruss.superheroplatform.models.Incident;
-import com.archeruss.superheroplatform.models.SuperHeroModel;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -20,12 +18,12 @@ public class CityRepository {
     public List<CityModel> getAll() throws SQLException {
         try {
             Connection conn = database.getDatabaseConnection();
-            String query = "SELECT id, name, longitude, latitude FROM superhero.city";
+            String query = "SELECT id, name, lon, lat FROM superhero.city";
             PreparedStatement stmt = conn.prepareStatement(query);
             ResultSet rs = stmt.executeQuery(query);
             ArrayList<CityModel> cityList = new ArrayList<>();
             while (rs.next()) {
-                CityModel city = new CityModel(rs.getInt("id"), rs.getString("name"), rs.getString("longitude"), rs.getString("latitude"));
+                CityModel city = new CityModel(rs.getInt("id"), rs.getString("name"), rs.getFloat("lon"), rs.getFloat("lat"));
                 cityList.add(city);
             }
             return cityList;
@@ -36,11 +34,11 @@ public class CityRepository {
     public boolean createCity(CityModel city) throws SQLException {
         try {
             Connection conn = database.getDatabaseConnection();
-            String query = "INSERT INTO city(name,longitude,latitude) VALUES(?,?,?)";
+            String query = "INSERT INTO city(name,lon,lat) VALUES(?,?,?)";
             PreparedStatement stmt = conn.prepareStatement(query);
             stmt.setString(1, city.name);
-            stmt.setString(2, city.longitude);
-            stmt.setString(3, city.latitude);
+            stmt.setFloat(2, city.lon);
+            stmt.setFloat(3, city.lat);
             return stmt.execute();
         } catch (SQLException exception) {
             throw exception;

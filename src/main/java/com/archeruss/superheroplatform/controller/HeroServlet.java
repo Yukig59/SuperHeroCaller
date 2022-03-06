@@ -37,8 +37,8 @@ public class HeroServlet extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String name = request.getParameter("heroName");
         Integer Tel = Integer.valueOf(request.getParameter("telephone"));
-        String longitude = request.getParameter("longitude");
-        String latitude = request.getParameter("latitude");
+        String longitude = request.getParameter("lon");
+        String latitude = request.getParameter("lat");
         Integer incident1 = Integer.valueOf(request.getParameter("incident1"));
         Integer incident2 = Integer.valueOf(request.getParameter("incident2"));
         Integer incident3 = Integer.valueOf(request.getParameter("incident3"));

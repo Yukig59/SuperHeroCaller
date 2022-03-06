@@ -1,7 +1,12 @@
 package com.archeruss.superheroplatform.repository;
 
+import com.archeruss.superheroplatform.controller.AddAlert;
+import com.archeruss.superheroplatform.models.CityModel;
+import com.archeruss.superheroplatform.models.Incident;
 import com.archeruss.superheroplatform.models.SuperHeroModel;
+import com.archeruss.superheroplatform.services.ServiceGPS;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -10,11 +15,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SuperheroRepository {
-    private final MysqlConn database;
+    private static final MysqlConn database = new MysqlConn();;
 
-    public SuperheroRepository() {
-        this.database = new MysqlConn();
-    }
+
 
     public boolean createHero(SuperHeroModel sh) throws SQLException {
         try {
@@ -34,7 +37,7 @@ public class SuperheroRepository {
         }
     }
 
-    public List<SuperHeroModel> getAllHeros() throws SQLException {
+    public static List<SuperHeroModel> getAllHeros() throws SQLException {
         try {
             Connection conn = database.getDatabaseConnection();
             String query = "SELECT * FROM heros";
@@ -51,4 +54,5 @@ public class SuperheroRepository {
         }
 
     }
+
 }

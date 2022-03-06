@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: cn.miludeer:jsoncode:1.2.7-file2">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/cn/miludeer/jsoncode/1.2.7-file2/jsoncode-1.2.7-file2.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/cn/miludeer/jsoncode/1.2.7-file2/jsoncode-1.2.7-file2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/cn/miludeer/jsoncode/1.2.7-file2/jsoncode-1.2.7-file2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

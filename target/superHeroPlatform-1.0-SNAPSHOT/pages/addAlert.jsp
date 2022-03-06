@@ -15,6 +15,7 @@
 
 </head>
 <body class="bg-info">
+
 <div style="margin-left: 15%;margin-right: 5%;" class="mt-5">
     <h1 class="text-light text-center">Déclarer un incident</h1>
     <form method="post" action="${pageContext.request.contextPath}/add-alert" class="form-control">

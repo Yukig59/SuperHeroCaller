@@ -29,7 +29,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.source>1.8</maven.compiler.source>
-        <junit.version>5.8.1</junit.version>
+        <junit.version>5.8.2</junit.version>
     </properties>
 
     <dependencies>
@@ -55,6 +55,11 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.9.0</version>
+        </dependency>
+        <dependency>
             <groupId>javax.mvc</groupId>
             <artifactId>javax.mvc-api</artifactId>
             <version>1.0.0</version>
@@ -70,6 +75,42 @@
             <artifactId>junit-jupiter-engine</artifactId>
             <version>${junit.version}</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.github.lbovolini</groupId>
+            <artifactId>ObjectMapper</artifactId>
+            <version>0.2.3</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>cn.miludeer</groupId>
+            <artifactId>jsoncode</artifactId>
+            <version>1.2.7-file2</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.13.1</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.json/json -->
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20211205</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient -->
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.2.5</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.12.0</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 
