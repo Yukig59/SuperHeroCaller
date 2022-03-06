@@ -17,12 +17,15 @@
 </head>
 <style>
     body{
-        background-image: url('https://media.discordapp.net/attachments/530696124349284382/950014275353726996/4830017.jpg');
+        background-image: url('https://media.discordapp.net/attachments/530696124349284382/950042227915231272/1354.jpg');
         background-position: center;
+        background-size: 100% ;
     }
 </style>
 <body>
-<h1 class="text-center text-primary fs-2 mt-5">Ajouter un nouveau héros</h1>
+<div class="text-center">
+    <img src="https://media.discordapp.net/attachments/530696124349284382/950053100998234152/Fichier_6Ajouter_heros_NB.png" width="50%" height="auto" />
+</div>
 <div class="text-center"><a href="<c:url value="/"/>"><button class="btn btn-sm btn-primary text-center">Retour</button></a>
 </div>
 <div style="margin-left: 15%;margin-right: 5%;">

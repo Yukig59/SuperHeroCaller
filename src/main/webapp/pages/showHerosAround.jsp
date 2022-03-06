@@ -22,8 +22,17 @@
         #map { height: 50%; width: 80%; margin-right: auto; margin-left: auto; }
     </style>
 </head>
-<body class="bg-info">
-<h1 class="text-center text-light">Carte des héros disponibles</h1>
+<style>
+    body{
+        background-image: url('https://media.discordapp.net/attachments/530696124349284382/950042229290987570/Sans-titre---1.jpg');
+        background-position: center;
+        background-size: 100% ;
+    }
+</style>
+<body>
+<div class="text-center">
+    <img src="https://media.discordapp.net/attachments/530696124349284382/950053101866483752/Fichier_9heros_dispo.png" width="50%" height="auto" />
+</div>
 <div class="text-center">
     <a href="<c:url value="/"/>"><button class="btn btn-sm btn-primary ">Retour</button></a>
 </div>

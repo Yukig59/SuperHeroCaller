@@ -16,8 +16,17 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
-<body class="bg-secondary">
-<h1 class="text-center text-light">Ajouter une ville</h1>
+<style>
+    body{
+        background-image: url('https://media.discordapp.net/attachments/530696124349284382/950042228758282261/1355.jpg');
+        background-size: 100% ;
+        background-position: center;
+    }
+</style>
+<body>
+<div class="text-center">
+    <img src="https://media.discordapp.net/attachments/530696124349284382/950053101287645204/Fichier_7Ajouter_ville_NB.png" width="50%" height="auto" />
+</div>
 <div class="text-center">
     <a href="<c:url value="/"/>">
         <button class="btn btn-sm btn-primary text-center">Retour</button>

@@ -46,6 +46,8 @@ public class HeroServlet extends HttpServlet {
         try {
             SuperheroRepository repo = new SuperheroRepository();
             repo.createHero(hero);
+            String message = "Héros créé !";
+            request.setAttribute("message",message);
             this.doGet(request, response);
         } catch (SQLException e) {
             e.printStackTrace();
