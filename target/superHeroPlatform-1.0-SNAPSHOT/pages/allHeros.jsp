@@ -29,9 +29,9 @@
             </div>
         </c:if>
     </span>
-<div class="d-flex justify-content-evenly ">
+<div class="d-flex justify-content-evenly flex-wrap w-50">
     <c:forEach var="item" items="${heroList}">
-    <div class="card" style="width: 18rem;">
+    <div class="card" style="width: 18rem;margin:5px;">
         <div class="card-body">
             <h5 class="card-title">${item.name}</h5>
             <h6 class="card-subtitle mb-2 text-muted">0${item.telephone}</h6>

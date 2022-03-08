@@ -32,6 +32,7 @@ protected static final String apiKey = "26584dd9b494a536a239863e63e974d1";
         return g.toJson(response.body());
     }
     public static CityModel getFromCityString(String ville) throws IOException, InterruptedException {
+        ville = ville.replace(" ", "%20");
         HttpClient client = HttpClient.newHttpClient();
         String url = "https://api.openweathermap.org/geo/1.0/direct?q="+ville+"&appid=" + apiKey;
         HttpRequest request = HttpRequest.newBuilder()
